@@ -11,6 +11,12 @@ AWS S3 links for each:
 
 Log data json path: `s3://udacity-dend/log_json_path.json`
 
+## Project files
+- create_tables.py: creates and drops existing tables
+- etl.py: load data from S3 into redshift
+- sql_quries.py: contains create table, drop table, copy statement, and insert queries
+- dwh.cfg: configration file for the redshift data warehouse
+
 ## Project steps
 - Staging tables for songs and events namely staging_events and staging_songs are created on AWS redshift
 - Star schema with one fact table namely songplays and four dimension tables namely users, songs, artists and time is created on AWS redshift
@@ -28,6 +34,12 @@ Log data json path: `s3://udacity-dend/log_json_path.json`
 - The data is loaded in a star schema with a fact table having foreign keys to four dimensional tables
 - user_id from table songplays is used as a redshift distribution key.
 - The primary key of each dimensional table is used as a sorting key for that table.
+
+## How to run
+- creat redshift cluster (region), a security group and an IAM role 
+- run create_python.py
+- run etl.py
+- 
 ## Test queries
 #####  SELECT count(*) FROM "dev"."public"."staging_events" where page = 'NextSong';
 | count |
