@@ -18,3 +18,4 @@ Log data json path: `s3://udacity-dend/log_json_path.json`
 - SQL insert statements are created to select data from Staging tables and insert it into the star schema tables.
 
 ## Database staging tables
+![enter image description here](https://github.com/BaZom/Data-warehouse-with-AWS-S3-and-Redshift/blob/4361dc1f49353701d142e70bcecdf2d2b8fe0633/staging_tables.png)
