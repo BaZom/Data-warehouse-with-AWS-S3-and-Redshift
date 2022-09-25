@@ -37,7 +37,7 @@ staging_events_table_create= ("""CREATE TABLE IF NOT EXISTS staging_events (\
                                 ts bigint,\
                                 userAgent VARCHAR,\
                                 userId VARCHAR,\
-                                PRIMARY KEY (stating_event_id));""")
+                                PRIMARY KEY (Staging_event_id));""")
 
 staging_songs_table_create = ("""CREATE TABLE IF NOT EXISTS staging_songs (\
                                 Staging_song_id INT IDENTITY(0,1),\
@@ -51,7 +51,7 @@ staging_songs_table_create = ("""CREATE TABLE IF NOT EXISTS staging_songs (\
                                 song_id VARCHAR,                            
                                 title VARCHAR,\
                                 year INT,\
-                                PRIMARY KEY (stating_song_id));""")
+                                PRIMARY KEY (staging_song_id));""")
 
 songplay_table_create = ("""CREATE TABLE IF NOT EXISTS songplays (\
                             songplay_id INT IDENTITY(0,1),\
