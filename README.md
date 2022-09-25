@@ -17,5 +17,16 @@ Log data json path: `s3://udacity-dend/log_json_path.json`
 - Data is loaded from an S3 bucket to the stating tables using COPY statement.
 - SQL insert statements are created to select data from Staging tables and insert it into the star schema tables.
 
-## Database staging tables
+## Staging tables
+
 ![enter image description here](https://github.com/BaZom/Data-warehouse-with-AWS-S3-and-Redshift/blob/4361dc1f49353701d142e70bcecdf2d2b8fe0633/staging_tables.png)
+
+## Star schema tables
+![enter image description here](https://github.com/BaZom/Data-warehouse-with-AWS-S3-and-Redshift/blob/848476c6f991f098374eba1e0247dcb8d3350468/star_schema.png)
+
+## Schema Design
+- The data is loaded in a star schema with a fact table having foreign keys to four dimensional tables
+- user_id from table songplays is used as a redshift distribution key.
+- The primary key of each dimensional table is used as a sorting key for that table.
+
+## Test queries
