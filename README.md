@@ -100,7 +100,7 @@ Log data json path: `s3://udacity-dend/log_json_path.json`
 |73	|18	|
 |88|17|
 |15|15|
-||24|13|
+|24|13|
 |36|13|
 |29|13|
 
