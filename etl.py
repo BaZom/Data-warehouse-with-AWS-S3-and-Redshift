@@ -19,7 +19,7 @@ def load_staging_tables(cur, conn):
 
 
 def insert_tables(cur, conn):
-""" iterates on insert statements in sql_quries.py to select data from staging tables and insert them into star schema tables
+    """ iterates on insert statements in sql_quries.py to select data from staging tables and insert them into star schema tables
            
     Args:
         curr (obj): object of curser class
@@ -27,7 +27,7 @@ def insert_tables(cur, conn):
         
     Returns:
         no return values
- """       
+     """       
     for query in insert_table_queries:
         cur.execute(query)
         conn.commit()
@@ -46,7 +46,7 @@ def main():
         
     Returns:
         no return values
- """  
+     """  
     config = configparser.ConfigParser()
     config.read('dwh.cfg')
 
