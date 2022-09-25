@@ -40,7 +40,7 @@ Log data json path: `s3://udacity-dend/log_json_path.json`
 - run create_python.py
 - run etl.py
 
-## Test queries
+## Sample queries
 #####  SELECT count(*) FROM "dev"."public"."staging_events" where page = 'NextSong';
 | count |
 |-------|
