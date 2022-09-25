@@ -28,5 +28,54 @@ Log data json path: `s3://udacity-dend/log_json_path.json`
 - The data is loaded in a star schema with a fact table having foreign keys to four dimensional tables
 - user_id from table songplays is used as a redshift distribution key.
 - The primary key of each dimensional table is used as a sorting key for that table.
-
 ## Test queries
+#####  SELECT count(*) FROM "dev"."public"."staging_events" where page = 'NextSong';
+ || count | |
+|-|-------|-|
+||6820  | |
+
+##### SELECT count(*) FROM "dev"."public"."staging_songs";
+ || count | |
+|-|-------|-|
+||14896| |
+
+##### SELECT count(*) FROM "dev"."public"."songplays";
+ || count | |
+|-|-------|-|
+||333| |
+
+#### SELECT count(*) FROM "dev"."public"."users" where user_id = '';
+ || count | |
+|-|-------|-|
+||107| |
+
+#### SELECT count(*) FROM "dev"."public"."time";
+ || count | |
+|-|-------|-|
+||8023| |
+
+#### SELECT count(*) FROM "dev"."public"."artists";
+ || count | |
+|-|-------|-|
+||10025| |
+
+#### SELECT count(*) FROM "dev"."public"."songs";
+ || count | |
+|-|-------|-|
+||14896| |
+
+#### SELECT song_id, count(*) as county FROM "dev"."public"."songplays"group by song_id order by county DESC limit 10;
+ || song_id| county||
+|-|-------|-|-|
+||SOBONKR12A58A7A7E0	|37	||
+||SOHTKMO12AB01843B0	|9||
+||SOUNZHU12A8AE47481	|9||
+||SOULTKQ12AB018A183	|9||
+||SOLZOBD12AB0185720	|6||
+||SOARUPP12AB01842E0	|5||
+||SOTNHIP12AB0183131	|5||
+||SOIOESO12A6D4F621D	|4||
+||SONQEYS12AF72AABC9	|4||
+||SOIZLKI12A6D4F7B61	|5||
+
+
