@@ -1,4 +1,6 @@
 # Data-warehouse-with-amazon-redshift
+Data warehouse project submission for Udacity Data Engineer for AI Applications Nanodegree
+
 ## Introduction
 This project aims to extract songs metadata and user activity data from JSON  files residing in an AWS S3 bucket and save them in a database star schema in AWS redshift. 
 
