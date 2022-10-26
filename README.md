@@ -1,4 +1,5 @@
 # Data-warehouse-with-amazon-redshift
+
 Data warehouse project submission for Udacity Data Engineer for AI Applications Nanodegree
 
 ## Introduction
